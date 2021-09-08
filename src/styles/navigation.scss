@@ -28,7 +28,7 @@
       opacity: 0;
       @for $i from 1 to 10 {
         &:nth-child(#{$i}) {
-          animation: 1s ease $i * 0.25s normal forwards 1 show;
+          animation: 1s ease $i * 0.25s normal forwards 1 showNavElements;
         }
       }
       &:hover {
@@ -49,7 +49,7 @@
   }
 }
 
-@keyframes show {
+@keyframes showNavElements {
   from {
     opacity: 0;
   }
