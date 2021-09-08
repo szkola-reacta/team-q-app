@@ -4,6 +4,7 @@
   height: 100vh;
   width: 100%;
   position: relative;
+  background-color: $charcoal;
   .hamburger__icon,
   .close__icon {
     position: absolute;
@@ -27,7 +28,7 @@
       opacity: 0;
       @for $i from 1 to 10 {
         &:nth-child(#{$i}) {
-          animation: 1s ease $i * 0.25s normal forwards 1 show;
+          animation: 1s ease $i * 0.25s normal forwards 1 showNavElements;
         }
       }
       &:hover {
@@ -40,7 +41,6 @@
 .navigation.navigation__open {
   background-color: $burntSienna;
   transition: all 0.5s ease;
-  // place-content: center;
 }
 .navigation.navigation__close {
   transition: all 0.5s ease;
@@ -49,7 +49,7 @@
   }
 }
 
-@keyframes show {
+@keyframes showNavElements {
   from {
     opacity: 0;
   }
@@ -58,24 +58,25 @@
   }
 }
 
-@media screen and (min-width: 768px) {
-  .navigation.navigation__close {
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-    padding: 1em;
-    .navigation__list {
-      display: flex;
-      justify-content: space-around;
-      .navigation__element {
-        padding: 0.5em 1em;
-        font-size: 1.2em;
-      }
-    }
-  }
+// @media screen and (min-width: 800px) {
+//   .navigation.navigation__close {
+//     height: auto;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: baseline;
+//     padding: 1em;
+//     .navigation__list {
+//       display: flex;
+//       justify-content: space-around;
+//       .navigation__element {
+//         padding: 0.5em 1em;
+//         font-size: 1.2em;
+//       }
+//     }
+//   }
 
-  .hamburger__icon,
-  .close__icon {
-    display: none;
-  }
-}
+//   .hamburger__icon,
+//   .close__icon {
+//     display: none;
+//   }
+// }
