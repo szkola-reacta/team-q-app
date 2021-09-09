@@ -1,7 +1,8 @@
 .navigation {
-  display: grid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 1em;
-  height: 100vh;
   width: 100%;
   position: sticky;
   top: 0;
@@ -10,16 +11,14 @@
   .hamburger__icon {
     font-size: 2em;
     color: $white;
-    &:hover {
-      cursor: pointer;
-    }
   }
   .close__icon {
     position: absolute;
-    top: 4%;
-    right: 1%;
+    top: 0%;
+    right: 0%;
     font-size: 2em;
     color: $white;
+    margin: 0.9em 0.4em;
     &:hover {
       cursor: pointer;
     }
@@ -46,12 +45,13 @@
     }
   }
 }
-.navigation.navigation__open {
+.navigation.navigation--open {
   background-color: $burntSienna;
   transition: all 0.5s ease;
-  position: fixed;
+  display: grid;
+  grid-template-columns: 100%;
 }
-.navigation.navigation__close {
+.navigation.navigation--close {
   transition: all 0.5s ease;
   height: auto;
   display: flex;
