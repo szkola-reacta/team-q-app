@@ -1,17 +1,22 @@
 .navigation {
-  display: grid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 1em;
-  height: 100vh;
   width: 100%;
   position: relative;
-  background-color: $charcoal;
-  .hamburger__icon,
-  .close__icon {
-    position: absolute;
-    top: 4%;
-    right: 5%;
+  background-color: $persianGreen;
+  .hamburger__icon {
     font-size: 2em;
     color: $white;
+  }
+  .close__icon {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    font-size: 2em;
+    color: $white;
+    margin: 0.9em 0.4em;
     &:hover {
       cursor: pointer;
     }
@@ -38,11 +43,13 @@
     }
   }
 }
-.navigation.navigation__open {
+.navigation.navigation--open {
   background-color: $burntSienna;
   transition: all 0.5s ease;
+  display: grid;
+  grid-template-columns: 100%;
 }
-.navigation.navigation__close {
+.navigation.navigation--close {
   transition: all 0.5s ease;
   .navigation__list {
     display: none;
