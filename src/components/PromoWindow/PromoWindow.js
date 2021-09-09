@@ -5,6 +5,7 @@ import img from "../../assets/mrrobot.jpg"
 export default function PromoWindow() {
   return (
     <div className="promo-window">
+      <p className="promo-window__title">Recommended title for You</p>
       <img
         src={img}
         alt="Mr.robot"
