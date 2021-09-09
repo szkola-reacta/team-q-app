@@ -1,8 +1,7 @@
 .navigation {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
   padding: 1em;
+  height: 100vh;
   width: 100%;
   position: sticky;
   top: 0;
@@ -18,7 +17,7 @@
     right: 0%;
     font-size: 2em;
     color: $white;
-    margin: 0.9em 0.4em;
+    margin: 1em 0.8em;
     &:hover {
       cursor: pointer;
     }
@@ -48,8 +47,9 @@
 .navigation.navigation--open {
   background-color: $burntSienna;
   transition: all 0.5s ease;
-  display: grid;
-  grid-template-columns: 100%;
+  position: fixed;
+  // display: grid;
+  // grid-template-columns: 100%;
 }
 .navigation.navigation--close {
   transition: all 0.5s ease;
