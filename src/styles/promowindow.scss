@@ -11,7 +11,7 @@
 .promo-window__title {
   color: $white;
   font-size: 2em;
-  margin: 0 0 1em 0em;
+  margin: 0 0 1em 0.5em;
 }
 
 .promo-window__image {
@@ -33,10 +33,15 @@
   color: #fff;
 }
 
-.promo-window__description-title,
-.promo-window__description-time {
+.promo-window__description-title {
   padding: 0.1em;
-  font-size: 1.5em;
+  font-size: 1.3em;
+}
+
+.promo-window__description-text {
+  padding: 0.1em;
+  color: $orangeYellowCrayola;
+  font-size: 1em;
 }
 
 @media screen and (min-width: 800px) {
@@ -44,9 +49,11 @@
     padding: 10em 0.5em 0.5em 0.5em;
   }
 
-  .promo-window__description-title,
-  .promo-window__description-time {
-    padding: 0.4em 0.5em;
+  .promo-window__description-title {
     font-size: 2em;
+    padding: 0.5em;
+  }
+  .promo-window__description-text {
+    padding: 1em;
   }
 }
