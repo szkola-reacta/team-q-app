@@ -3,6 +3,7 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     &__tile{
         width: 49.5%;
         margin: 1% 0 0 0;
@@ -64,6 +65,34 @@
                 img{
                     transform: scale(1.1);
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 970px) {
+    .row{
+        &__tile{
+            font-size: 13px;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .row{
+        &__tile{
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .row{
+        &__tile{
+            width: 100%;
+            font-size: 11px;
+            &__inner{
+                padding-top: 45%;
             }
         }
     }
